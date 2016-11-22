@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="RoundIndicatorView">
+        <!--最大数值-->
         <attr name="maxNum" format="integer"/>
+        <!--圆盘起始角度-->
         <attr name="startAngle" format="integer"/>
+        <!--圆盘扫过的角度-->
         <attr name="sweepAngle" format="integer"/>
     </declare-styleable>
 </resources>

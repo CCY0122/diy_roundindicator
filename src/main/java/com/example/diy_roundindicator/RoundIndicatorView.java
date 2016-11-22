@@ -117,8 +117,9 @@ public class RoundIndicatorView extends View {
         maxNum = array.getInt(R.styleable.RoundIndicatorView_maxNum,500);
         startAngle = array.getInt(R.styleable.RoundIndicatorView_startAngle,160);
         sweepAngle = array.getInt(R.styleable.RoundIndicatorView_sweepAngle,220);
-        sweepInWidth = dp2px(8); //内圆宽度
-        sweepOutWidth = dp2px(3); //外圆宽度
+        //内外圆的宽度
+        sweepInWidth = dp2px(8);
+        sweepOutWidth = dp2px(3);
         array.recycle();
     }
 
@@ -242,9 +243,7 @@ public class RoundIndicatorView extends View {
 //        Rect rect = new Rect();
 //        paint.getTextBounds(text,0,text.length(),rect);
         canvas.drawText(text,-width/2 , -radius + dp2px(15),paint);
-
         paint.setStyle(Paint.Style.STROKE);
-
     }
 
     private void drawRound(Canvas canvas) {
