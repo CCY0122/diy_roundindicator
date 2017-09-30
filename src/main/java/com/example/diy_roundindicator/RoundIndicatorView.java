@@ -201,7 +201,9 @@ public class RoundIndicatorView extends View {
         paint_2.setShader(shader);
         int w = dp2px(10);
         RectF rectf = new RectF(-radius-w , -radius-w , radius+w , radius+w);
-        canvas.drawArc(rectf,startAngle,sweep,false,paint_2);
+        if(sweep > 0){
+            canvas.drawArc(rectf,startAngle,sweep,false,paint_2);
+        }
         float x = (float) ((radius+dp2px(10))*Math.cos(Math.toRadians(startAngle+sweep)));
         float y = (float) ((radius+dp2px(10))*Math.sin(Math.toRadians(startAngle+sweep)));
         paint_3.setStyle(Paint.Style.FILL);
